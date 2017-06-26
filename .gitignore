@@ -1,0 +1,8 @@
+/bin
+/lib
+/data
+/build
+Makefile
+*.swp
+.svn
+*.tar.gz
