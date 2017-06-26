@@ -1,0 +1,3 @@
+[submodule "domlib"]
+	path = domlib
+	url = ../domlib
