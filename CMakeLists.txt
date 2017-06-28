@@ -19,11 +19,10 @@ else()
 endif()
 
 
-if (NOT DEFINED NO_MPI OR NO_MPI EQUAL 0)
+if (DEFINED BUILD_MPI AND BUILD_MPI EQUAL 1)
   find_package(MPI REQUIRED)
   include_directories(${MPI_INCLUDE_PATH})
-else()
-  add_definitions(-DNO_MPI=${NO_MPI})
+  add_definitions(-DBUILD_MPI=1)
 endif()
 
 

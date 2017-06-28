@@ -21,6 +21,6 @@ install(TARGETS gooseberry_bin
   RUNTIME DESTINATION bin
 )
 
-if (NOT DEFINED NO_MPI OR NO_MPI EQUAL 0)
+if (DEFINED BUILD_MPI AND BUILD_MPI EQUAL 1)
   add_subdirectory("mpi")
 endif()

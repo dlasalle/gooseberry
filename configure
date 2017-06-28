@@ -51,7 +51,7 @@ show_help() {
   echo "    Use doubles to store values instead of floats."
 #  echo "  --noomp"
 #  echo "    Build without multithreading."
-  echo "  --nompi"
+  echo "  --mpi"
   echo "    Do not build MPI library functions and binaries."
   echo ""
 }
@@ -114,9 +114,9 @@ for i in "${@}"; do
     --noomp)
     CONFIG_FLAGS="${CONFIG_FLAGS} -DNO_OMP=1"
     ;;
-    # disable mpi
-    --nompi)
-    CONFIG_FLAGS="${CONFIG_FLAGS} -DNO_MPI=1"
+    # enable mpi
+    --mpi)
+    CONFIG_FLAGS="${CONFIG_FLAGS} -DBUILD_MPI=1"
     ;;
     # bad argument
     *)
