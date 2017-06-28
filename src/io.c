@@ -304,6 +304,7 @@ static int __read_graph(
   n = 0;
   j = 0;
   rowptr[0] = 0;
+  f = 0;
   while((ll = dl_get_next_line(fin,&line,&bufsize)) >= 0) {
     if (ll == 0) {
       /* assume island vertex */
